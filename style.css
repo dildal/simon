@@ -1,0 +1,187 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: #eee;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+.simon-container{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 10px solid black;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: black;
+}
+
+.button-row{
+    width: 100%;
+    height: 50%;
+/*    border: 1px solid black;*/
+/*    overflow: hidden;*/
+}
+
+.button-row:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.top{
+/*    margin-bottom: 1%;*/
+}
+
+
+.button {
+    height: 100%;
+    width: 48%;
+    border: 1px solid black;
+}
+
+.right {
+    margin-left: 1%;
+    float: right;
+}
+
+.left{
+    margin-right: 1%;
+    float: left;
+}
+
+.middle{
+    width: 275px;
+    height: 275px;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background: #000;
+    border-radius: 50%;
+    border: 10px solid black;
+    padding: 40px;
+}
+
+.top{
+    margin-bottom: 1%;
+}
+
+.bottom{
+    margin-top: 1%;
+}
+
+.green{
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.blue {
+    background-color: blue;
+}
+
+
+.buttons-container{
+    text-align: center;
+    margin-top: 12px;
+}
+
+
+.count{
+    background: red;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 40px;
+    padding: 5px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.middle button{
+    padding: 19px 12px;
+    border-radius: 50%;
+    font-size: 1rem;
+    outline: none;
+    position: relative;
+}
+
+.click {
+    opacity: .6;
+}
+
+
+.strict{
+    background-color: hsl(10, 58%, 61%);
+    border: 1px solid hsl(10, 58%, 61%);
+    color: #fff;
+    text-shadow: 1px 1px 0 #000;
+    box-shadow: inset 0 1px 0 hsl(10, 58%, 61%),
+                0 2px 0 hsl(10, 58%, 55%),
+                0 3px 0 hsl(10, 58%, 49%),
+                0 4px 0 hsl(10, 58%, 43%),
+                0 5px 0 hsl(10, 58%, 37%),
+                0 6px 0 hsl(10, 58%, 31%),
+                0 7px 0 hsl(10, 58%, 25%),
+                0 8px 0 hsl(10, 58%, 19%),
+                0 9px 0 hsl(10, 58%, 13%),
+                0 10px 0 hsl(10, 58%, 7%);
+}
+
+    .strict:active, .strict.pressed {
+        top: 3px;
+        box-shadow: inset 0 1px 0 hsl(10, 58%, 61%),
+                0 2px 0 hsl(10, 58%, 55%),
+                0 3px 0 hsl(10, 58%, 49%),
+                0 4px 0 hsl(10, 58%, 43%),
+                0 5px 0 hsl(10, 58%, 37%),
+                0 6px 0 hsl(10, 58%, 31%),
+                0 7px 0 hsl(10, 58%, 25%);
+    }
+
+.start{
+    background-color: hsl(100, 58%, 61%);
+    border: 1px solid hsl(100, 58%, 61%);
+    color: #fff;
+    margin-right: 5px;
+    text-shadow: 1px 1px 0 #000;
+    box-shadow: inset 0 1px 0 hsl(100, 58%, 61%),
+                0 2px 0 hsl(100, 58%, 55%),
+                0 3px 0 hsl(100, 58%, 49%),
+                0 4px 0 hsl(100, 58%, 43%),
+                0 5px 0 hsl(100, 58%, 37%),
+                0 6px 0 hsl(100, 58%, 31%),
+                0 7px 0 hsl(100, 58%, 25%),
+                0 8px 0 hsl(100, 58%, 19%),
+                0 9px 0 hsl(100, 58%, 13%),
+                0 10px 0 hsl(100, 58%, 7%);
+}
+
+    .start:active {
+        top: 3px;
+        box-shadow: inset 0 1px 0 hsl(100, 58%, 61%),
+                0 2px 0 hsl(100, 58%, 55%),
+                0 3px 0 hsl(100, 58%, 49%),
+                0 4px 0 hsl(100, 58%, 43%),
+                0 5px 0 hsl(100, 58%, 37%),
+                0 6px 0 hsl(100, 58%, 31%),
+                0 7px 0 hsl(100, 58%, 25%);
+    }
