@@ -19,11 +19,13 @@ html {
     border-radius: 50%;
     border: 10px solid black;
     position: relative;
-    top: 50%;
-    left: 50%;
     overflow: hidden;
-    transform: translateX(-50%) translateY(-50%);
     background-color: black;
+    margin: 5rem auto 0;
+}
+
+.top-display{
+    margin: 0 12px;
 }
 
 .button-row{
@@ -108,20 +110,28 @@ html {
 .count{
     background: red;
     font-family: 'Press Start 2P', sans-serif;
-    font-size: 40px;
-    padding: 5px;
+    font-size: 3rem;
+    padding: .3rem;
     letter-spacing: 1px;
-    border-radius: 5px;
+    border-radius: .3rem;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 1.56rem;
 }
 
-.middle button{
-    padding: 19px 12px;
+.round-button{
+    padding: 1.1875rem .75rem;
     border-radius: 50%;
     font-size: 1rem;
     outline: none;
     position: relative;
+}
+
+.button-square{
+    font-size: 2rem;
+    outline: none;
+    padding: 1.1875rem .75rem;
+    position: relative;
+    width: 48%;
 }
 
 .click {
@@ -185,3 +195,31 @@ html {
                 0 6px 0 hsl(100, 58%, 31%),
                 0 7px 0 hsl(100, 58%, 25%);
     }
+
+    .show-at-medium{
+        display: none;
+    }
+
+@media (max-width: 700px){
+    .simon-container{
+        width: 250px;
+        height: 250px;
+    }
+
+    .middle{
+        width: 100px;
+        height: 100px;
+    }
+
+    .show-at-medium{
+        display: block;
+    }
+
+    .hide-at-medium {
+        display: none;
+    }
+
+    .buttons-container {
+        min-width: 250px;
+    }
+}

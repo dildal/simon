@@ -1,9 +1,9 @@
 const colors = ["green", "blue", "red", "yellow"];
 const simonButtons = document.querySelectorAll('.button');
-const start = document.querySelector('.start');
+const start = document.querySelectorAll('.start');
 const wrong = document.querySelector('audio.wrong');
-const count = document.querySelector('.count');
-const strict = document.querySelector('.strict');
+const count = document.querySelectorAll('.count');
+const strict = document.querySelectorAll('.strict');
 let compMoves = [];
 let playerMoves = [];
 let playerTurn = false;
@@ -23,9 +23,9 @@ function computerTurn(){
     playerMoves = [];
     compMoves.push(colors[Math.floor(Math.random() * 4)]);
     if(compMoves.length < 10){
-        count.innerText = '0' + compMoves.length;
+        count.forEach(count => count.innerText = '0' + compMoves.length);
     }else{
-        count.innerText = compMoves.length;
+        count.forEach(count => count.innerText = compMoves.length);
     }
     runPattern();
 }
@@ -88,14 +88,19 @@ function playerClick(){
 simonButtons.forEach(function(simonButton){
     simonButton.addEventListener('click', function() {playerTurn && playerClick.call(this)})
 })
-start.addEventListener('click', () => {
-    compMoves = [];
-    computerTurn();
-})
 
-strict.addEventListener('click', () => {
-    strict.classList.toggle('pressed');
-    strictOn = !strictOn;
+start.forEach(function(startButton){
+    startButton.addEventListener('click', () => {
+        compMoves = [];
+        computerTurn();
+    });
+});
+
+strict.forEach(function(strictButton){
+    strictButton.addEventListener('click', () => {
+        strictButton.classList.toggle('pressed');
+        strictOn = !strictOn;
+    });
 });
 
 

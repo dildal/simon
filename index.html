@@ -3,12 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Simon</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 
 <body>
+  <div class="show-at-medium top-display">
+    <div class="count">00</div>
+    <div class="buttons-container">
+      <button class="start button-square">Start</button>
+      <button class="strict button-square">Strict</button>
+    </div>
+  </div>
+
     <div class="simon-container">
        <div class="button-row">
         <div data-color="green" class="green button left top"></div>
@@ -16,10 +24,12 @@
        </div>
        <div class="middle">
          
-          <div class="count">00</div>
-          <div class="buttons-container">
-              <button class="start">Start</button>
-              <button class="strict">Strict</button>
+          <div class="hide-at-medium">
+            <div class="count">00</div>
+            <div class="buttons-container">
+                <button class="start round-button">Start</button>
+                <button class="strict round-button">Strict</button>
+            </div>
           </div>
        </div>
        <div class="button-row">
